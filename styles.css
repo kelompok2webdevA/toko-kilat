@@ -1,0 +1,720 @@
+
+/* =================================
+   1. PENGATURAN DASAR
+================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --navy: #172554;
+    --blue: #2563EB;
+    --yellow: #F59E0B;
+    --light: #F1F5F9;
+    --white: #FFFFFF;
+    --text: #475569;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--white);
+    color: var(--navy);
+    line-height: 1.6;
+}
+
+h1, h2, h3, .logo {
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button, input, select {
+    font: inherit;
+}
+
+/* =================================
+   2. HEADER DAN NAVBAR
+================================= */
+
+#header-section {
+    width: 100%;
+    background: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--navy);
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--blue);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+.nav-menu a {
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: var(--blue);
+}
+
+.nav-button {
+    background: var(--blue);
+    color: var(--white);
+    padding: 11px 22px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.nav-button:hover {
+    background: var(--navy);
+    transform: translateY(-2px);
+}
+
+/* =================================
+   3. HERO SECTION
+================================= */
+
+#hero-section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 100px 30px;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+    gap: 65px;
+    min-height: 590px;
+}
+
+.hero-label, .section-label {
+    display: inline-block;
+    color: var(--blue);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.hero-content h1 {
+    font-size: clamp(36px, 5vw, 57px);
+    line-height: 1.18;
+    letter-spacing: -2px;
+    margin-bottom: 22px;
+}
+
+.hero-content h1 span {
+    color: var(--blue);
+}
+
+.hero-content > p {
+    color: var(--text);
+    font-size: 16px;
+    max-width: 550px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.button-primary, .button-secondary {
+    padding: 13px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.button-primary {
+    background: var(--blue);
+    color: var(--white);
+}
+
+.button-primary:hover {
+    background: var(--navy);
+    transform: translateY(-3px);
+}
+
+.button-secondary {
+    color: var(--navy);
+    border: 1px solid #CBD5E1;
+}
+
+.button-secondary:hover {
+    background: var(--light);
+}
+
+.hero-benefits {
+    display: flex;
+    gap: 35px;
+    margin-top: 55px;
+    flex-wrap: wrap;
+}
+
+.hero-benefits div {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.hero-benefits strong {
+    color: var(--yellow);
+    font-size: 22px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero-benefits span {
+    color: var(--text);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* HERO VISUAL */
+
+.hero-visual {
+    min-height: 390px;
+    background: #DBEAFE;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.visual-card {
+    background: var(--navy);
+    color: var(--white);
+    width: 75%;
+    min-height: 280px;
+    border-radius: 18px;
+    padding: 35px;
+    box-shadow: 0 25px 50px rgba(23, 37, 84, 0.25);
+    transform: rotate(-4deg);
+}
+
+.visual-icon {
+    color: var(--yellow);
+    font-size: 30px;
+}
+
+.visual-small {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #BFDBFE;
+    margin-top: 15px;
+}
+
+.visual-card h2 {
+    font-size: 30px;
+    line-height: 1.3;
+    margin-top: 12px;
+}
+
+.visual-line {
+    width: 55px;
+    height: 4px;
+    background: var(--yellow);
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+.visual-caption {
+    color: #CBD5E1;
+    font-size: 12px;
+}
+
+.floating-tag {
+    position: absolute;
+    bottom: 35px;
+    right: 5px;
+    background: var(--yellow);
+    color: var(--navy);
+    padding: 12px 17px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 800;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* =================================
+   4. KATALOG PAKET
+================================= */
+
+#catalog-section {
+    background: var(--light);
+    padding: 90px 30px;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 50px;
+}
+
+.section-heading h2,
+.calculator-content h2 {
+    font-size: 35px;
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+.section-heading p,
+.calculator-content > p {
+    color: var(--text);
+    font-size: 15px;
+}
+
+.catalog-container {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    align-items: stretch;
+}
+
+.package-card {
+    background: var(--white);
+    padding: 32px 27px;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+}
+
+.package-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 35px rgba(23, 37, 84, 0.1);
+}
+
+.package-number {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #DBEAFE;
+    color: var(--blue);
+    font-weight: 800;
+    border-radius: 10px;
+    margin-bottom: 22px;
+}
+
+.package-card h3 {
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+.package-description {
+    color: var(--text);
+    font-size: 13px;
+    min-height: 65px;
+}
+
+.package-price {
+    margin: 25px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.package-price strong {
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    color: var(--blue);
+}
+
+.package-price span {
+    color: #94A3B8;
+    font-size: 12px;
+}
+
+.package-card ul {
+    list-style: none;
+    border-top: 1px solid #E2E8F0;
+    padding-top: 22px;
+    margin-bottom: 28px;
+    flex-grow: 1;
+}
+
+.package-card li {
+    color: var(--text);
+    font-size: 13px;
+    margin-bottom: 14px;
+    padding-left: 23px;
+    position: relative;
+}
+
+.package-card li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--blue);
+    font-weight: 800;
+}
+
+.package-button {
+    display: block;
+    text-align: center;
+    padding: 12px;
+    border: 1px solid var(--blue);
+    color: var(--blue);
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.package-button:hover {
+    background: var(--blue);
+    color: var(--white);
+}
+
+.package-card.featured {
+    border: 2px solid var(--blue);
+    box-shadow: 0 15px 35px rgba(37, 99, 235, 0.12);
+}
+
+.featured .package-button {
+    background: var(--blue);
+    color: var(--white);
+}
+
+.featured .package-button:hover {
+    background: var(--navy);
+}
+
+.popular-label {
+    position: absolute;
+    top: -14px;
+    right: 20px;
+    background: var(--yellow);
+    color: var(--navy);
+    font-size: 10px;
+    font-weight: 800;
+    padding: 6px 13px;
+    border-radius: 20px;
+}
+
+/* =================================
+   5. KALKULATOR
+================================= */
+
+#calc-section {
+    padding: 100px 30px;
+    background: var(--white);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 70px;
+    max-width: 1150px;
+    margin: auto;
+}
+
+.calculator-content h2 {
+    font-size: 38px;
+}
+
+.calculator-content > p {
+    max-width: 430px;
+}
+
+.calculator-box {
+    background: var(--light);
+    padding: 35px;
+    border-radius: 18px;
+    border: 1px solid #E2E8F0;
+}
+
+#calculator-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#calculator-form label {
+    font-size: 13px;
+    font-weight: 700;
+    margin: 15px 0 8px;
+}
+
+#calculator-form select,
+#calculator-form input {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #CBD5E1;
+    border-radius: 8px;
+    background: var(--white);
+    color: var(--navy);
+    outline: none;
+}
+
+#calculator-form select:focus,
+#calculator-form input:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.promo-info {
+    font-size: 12px;
+    color: var(--text);
+    margin-top: 10px;
+}
+
+.promo-info strong {
+    color: var(--blue);
+}
+
+.calculate-button {
+    margin-top: 22px;
+    padding: 14px;
+    background: var(--blue);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.calculate-button:hover {
+    background: var(--navy);
+    transform: translateY(-2px);
+}
+
+.result-box {
+    background: var(--white);
+    border: 1px dashed #93C5FD;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 22px;
+    color: var(--text);
+    text-align: center;
+    font-size: 13px;
+}
+
+/* =================================
+   6. FOOTER
+================================= */
+
+#footer-section {
+    background: var(--navy);
+    color: var(--white);
+    padding: 55px 30px 20px;
+}
+
+.footer-content {
+    max-width: 1150px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+.footer-logo {
+    color: var(--white);
+}
+
+.footer-logo span {
+    color: var(--yellow);
+}
+
+.footer-content > div:first-child p {
+    max-width: 350px;
+    color: #CBD5E1;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+.footer-info strong {
+    display: block;
+    margin-bottom: 13px;
+}
+
+.footer-info p {
+    color: #CBD5E1;
+    font-size: 13px;
+    margin-bottom: 7px;
+}
+
+.footer-bottom {
+    max-width: 1150px;
+    margin: auto;
+    border-top: 1px solid #334155;
+    padding-top: 20px;
+    text-align: center;
+    color: #94A3B8;
+    font-size: 12px;
+}
+
+/* =================================
+   7. RESPONSIVE TABLET
+================================= */
+
+@media (max-width: 900px) {
+
+    #hero-section {
+        gap: 35px;
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+
+    .catalog-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #calc-section {
+        gap: 35px;
+    }
+
+    .hero-benefits {
+        gap: 20px;
+    }
+}
+
+/* =================================
+   8. RESPONSIVE HP
+================================= */
+
+@media (max-width: 650px) {
+
+    .navbar {
+        padding: 15px 20px;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .nav-menu {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 22px;
+    }
+
+    .nav-menu a {
+        font-size: 12px;
+    }
+
+    .nav-button {
+        font-size: 11px;
+        padding: 9px 13px;
+    }
+
+    #hero-section {
+        grid-template-columns: 1fr;
+        padding: 65px 22px;
+        gap: 45px;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+    .hero-content > p {
+        font-size: 14px;
+    }
+
+    .hero-benefits {
+        margin-top: 35px;
+        gap: 20px;
+    }
+
+    .hero-visual {
+        min-height: 330px;
+    }
+
+    .visual-card {
+        min-height: 240px;
+        padding: 25px;
+    }
+
+    .visual-card h2 {
+        font-size: 25px;
+    }
+
+    .floating-tag {
+        right: 8px;
+        bottom: 20px;
+        font-size: 10px;
+    }
+
+    #catalog-section {
+        padding: 70px 20px;
+    }
+
+    .section-heading h2,
+    .calculator-content h2 {
+        font-size: 28px;
+    }
+
+    .catalog-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .package-description {
+        min-height: auto;
+    }
+
+    #calc-section {
+        grid-template-columns: 1fr;
+        padding: 70px 20px;
+        gap: 30px;
+    }
+
+    .calculator-box {
+        padding: 25px 20px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    #footer-section {
+        padding: 45px 22px 20px;
+    }
+}
