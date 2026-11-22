@@ -718,3 +718,46 @@ button, input, select {
         padding: 45px 22px 20px;
     }
 }
+
+/* DAFTAR ANGGOTA KELOMPOK */
+
+.team-members {
+    margin-top: 25px;
+}
+
+.team-members > strong {
+    display: block;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.team-members ul {
+    list-style: none;
+    padding: 0;
+}
+
+.team-members li {
+    margin-bottom: 18px;
+    padding-left: 13px;
+    border-left: 2px solid #F59E0B;
+}
+
+.team-members li b {
+    display: block;
+    color: #FFFFFF;
+    font-size: 13px;
+}
+
+.team-members li span {
+    display: block;
+    color: #93C5FD;
+    font-size: 11px;
+    margin: 3px 0;
+}
+
+.team-members li p {
+    color: #CBD5E1;
+    font-size: 11px;
+    line-height: 1.6;
+}
