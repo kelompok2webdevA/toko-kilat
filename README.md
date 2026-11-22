@@ -9,7 +9,7 @@ Layanan Pembuatan Website Toko Daring Instan
 
 ## Tautan Website (GitHub Pages)
 
-https://destidwiindrayani.github.io/TokoKilat/
+https://kelompok2webdeva.github.io/toko-kilat/
 
 ## Daftar Anggota Kelompok
 
